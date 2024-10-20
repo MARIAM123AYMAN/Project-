@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo span {
+            font-size: 24px;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .navbar .search-bar {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .navbar .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .navbar .search-bar button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar .icons .icon {
+            position: relative;
+            font-size: 16px;
+            color: #555;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .navbar .icons .icon .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>FreshCart</span>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products">
+            <button>Search</button>
+        </div>
+
+        <div class="icons">
+            <a href="#" class="icon">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">1</span>
+            </a>
+            <a href="#" class="icon">Sign up</a>
+            <a href="#" class="icon">My Orders</a>
+            <a href="#" class="icon">
+                <i class="fas fa-shopping-cart"></i>
+                Shopping Cart
+            </a>
+        </div>
+    </nav>
+
+</body>
+</html>
+

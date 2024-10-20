@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- <base href="/">  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+   
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="home.html">
+                    <img src="images/freshcart-logo.svg" alt="FreshCart" width="120" id="logoLink">
+                </a>
+    
+                <!-- Toggler for mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+               
+            </div>
+        </nav>
+    </header>
+    
+
+    <form id="registrationForm" class="rounded shadow w-75 mx-auto bg-light p-5 mt-3" novalidate>
+        <div class="form-item mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" type="text" name="name" id="name" required pattern=".{3,8}">
+            <div class="invalid-feedback">Please enter a valid name.</div>
+        </div>
+    
+        <div class="form-item mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email" required  >
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+    
+        <div class="form-item mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" minlength="6" required pattern="\w{6,}" >
+            <div class="invalid-feedback">Please enter a valid password.</div>
+        </div>
+    
+        <div class="form-item mb-3">
+            <label class="form-label" for="password2">Confirm Password</label>
+            <input class="form-control" type="password" name="password2" id="password2" minlength="6" required pattern="\w{6,}">
+            <div class="invalid-feedback">Passwords must match.</div>
+        </div>
+    
+        <div class="form-item mb-3">
+            <label class="form-label" for="phone">Phone</label>
+            <input class="form-control" type="text" name="phone" id="phone" pattern="01[0125][0-9]{8}" required>
+            <div class="invalid-feedback">Please enter a valid 11-digit phone number.</div>
+        </div>
+    
+        <div class="form-item">
+            <button class="btn main-btn btn-block w-100 py-2" type="submit">Register</button>
+        </div>
+        <p class=" mt-3">Already have an account? <a class="text-decoration-none text-main fw-bold" href="login.html"> Login</a></p>
+
+    </form>
+
+
+    
+
+    
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

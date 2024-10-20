@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Details</title>
+        <!-- <base href="/">  -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/details.css">
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300;400;700&display=swap"
+            rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="home.html">
+                    <img src="images/freshcart-logo.svg" alt="FreshCart" width="120">
+                </a>
+    
+                <!-- Toggler for mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Navbar Links -->
+                 <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto d-lg-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+                        <!-- Social Icons -->
+                        <li class="nav-item d-flex gap-3">
+                            <div class="icons-container">
+                                <!-- Wishlist Icon -->
+                                <div class="icon-wrapper">
+                                    <i class="one fa-regular fa-heart"></i>
+                                    <span class="badge">5</span>
+                                </div>
+                            
+                                <!-- User Account Icon -->
+                                <div class="icon-wrapper">
+                                    <i class="one fa-regular fa-user"></i>
+                                </div>
+                            
+                                <!-- Cart Icon -->
+                                <div class="icon-wrapper">
+                                    <a class="text-secondary" href="cart.html"><i class="one fa-solid fa-cart-shopping"></i></a>
+                                    <span id="cartIconNumber" class=" badge cart-item-count">0</span>
+                                </div>
+                            </div>
+                            
+                        </li>
+    
+                        <!-- Sign Out -->
+                        <li class="nav-item">
+                            <span role="button" id="signOutBtn" class="nav-link btn btn-outline-danger px-3 py-2">Sign out</span>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container d-flex pt-5 ">
+        <div class="image-container d-flex flex-column align-items-center w-50 me-5" id="imageContainer">
+            <div class="large-image">
+                <img src="" alt="Product Cover" id="largeImage" class="img-fluid w-100">
+            </div>
+            <div class="small-images">
+            </div>
+        </div>
+        <div class="additional-content d-flex flex-column mt-5 w-50">
+            <div class="product-info ">
+                <p id="productCategory" class="category mb-2 fs-5 text-main"></p>
+                <span id="productTitle" class="product-name mb-2 fs-4 fw-bold h1"></span>
+                <span class="fs-4 fw-bold h1" > /</span>
+                <span id="productBrand" class="product-description mb-2 fs-4 fw-bold h1"></span>
+                <span class="fs-4 fw-bold h1">Brand</span>
+                
+                <div class="rating-reviews d-flex align-items-center mb-3">
+                    <span id="productRating" class="rating rating-color me-3 fs-6"></span>
+                    <span id="productReviews" class="reviews text-main fw-bold fs-6"></span>
+                </div>
+                <div class="price-info d-flex align-items-center mb-2">
+                    <span id="productAfterDiscount" class="current-price text-dark fw-bold fs-6"></span>
+                    <del id="productOriginalPrice"  class="original-price ms-2 fs-6 fw-bold"></del>
+                    <span id="productDiscountPercentage" class="discount"></span>
+                </div>
+            <div class="border my-3"></div>
+        
+            </div>
+            <div class="product-options">
+
+                <div class="quantity-control d-flex align-items-center g-10 mb-4">
+                    <button onclick="decreaseQuantity()" class="quantity-btn">-</button>
+                    <input id="quantityInput" type="text" class="quantity-input mx-2" value="1" readonly>
+                    <button onclick="increaseQuantity()" class="quantity-btn">+</button>
+                </div>
+                
+                <div class="mb-3">
+                    <button onclick="addToCart()" class="add-to-cart-btn bg-main text-light px-4 py-2 border-0 rounded cursor-pointer">
+                        <i class="fa fa-shopping-bag me-2"></i> Add to cart
+                    </button>
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="fs-6 my-3 text-secondary d-flex flex-column">
+                <div class="mb-3 ">
+                    <div class="fw-bold me-2">product Description:</div>
+                    <p id="productDescription" class="productDescription text-dark fw-bold"></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+  
+
+
+
+
+    
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/details.js"></script>
+</body>
+</html>

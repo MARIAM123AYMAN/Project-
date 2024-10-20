@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <!-- <base href="/">  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="home.html">
+                    <img src="images/freshcart-logo.svg" alt="FreshCart" width="120">
+                </a>
+
+                <!-- Toggler for mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul
+                        class="navbar-nav ms-auto d-lg-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+                        <!-- Social Icons -->
+                        <li class="nav-item d-flex gap-3">
+                            <div class="icons-container">
+                                <!-- Wishlist Icon -->
+                                <div class="icon-wrapper">
+                                    <i class="one fa-regular fa-heart"></i>
+                                    <span class="badge">5</span>
+                                </div>
+
+                                <!-- User Account Icon -->
+                                <div class="icon-wrapper">
+                                    <i class="one fa-regular fa-user"></i>
+                                </div>
+
+                                <!-- Cart Icon -->
+                                <div class="icon-wrapper">
+                                    <i class="one fa-solid fa-cart-shopping"></i>
+
+                                    <span id="cartIconNumber" class=" badge cart-item-count">0</span>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <!-- Sign Out -->
+                        <li class="nav-item">
+                            <span role="button" id="signOutBtn" class="nav-link btn btn-outline-danger px-3 py-2">Sign
+                                out</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3 class="mb-4">Your Cart</h3>
+                <div id="cartContainer">
+                </div>
+    
+                <div id="paginationContainer" class="mt-4 d-flex justify-content-center">
+                </div>
+            </div>
+    
+            <div class="col-lg-4">
+                <div id="order-summary" class="p-4 mt-5 border rounded shadow-sm">
+                    <h4 class="fw-bold mb-5">Order Summary</h4>
+                    <p class="fw-bold text-muted mb-4">Total Items: <span id="total-items">0</span></p>
+                    <div id="totalPriceContainer">
+                        <p class="fw-bold text-muted">Total Price: <span id="total-price">0 EGP</span></p>
+                    </div>
+                    <button class="btn main-btn w-100">Checkout</button>
+                </div>
+                    <!-- <button class="btn main-btn w-75 mx-auto mt-5 mb-2">Continue Shopping</button> -->
+
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
